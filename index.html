@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Splitly - Smart Bill Splitting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<style>
+    /* General Styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        text-align: center;
+    }
+
+    /* Navbar - Fixed with Shadow */
+    #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #027aca;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+    #logo img {
+        height: 40px;
+    }
+    #btn {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;  /* Ensures buttons stay inside screen */
+}
+
+/* Fix Button Size & Spacing */
+#btn button {
+    height: 40px;
+    width: 100px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+}
+
+    #login {
+        background-color: white;
+        color: #027aca;
+    }
+
+    #login a {
+        text-decoration: none;
+    }
+
+    #signup {
+        background-color: #FF8C00;
+        color: white;
+    }
+    #signup a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #login:hover {
+        background-color: #d8e6f3;
+    }
+
+    #signup:hover {
+        background-color: #e07b00;
+    }
+
+
+
+
+
+
+
+    #splitly {
+        position: relative;
+        background-image: url("https://cf.ltkcdn.net/dating/images/orig/244041-1944x1543-couple-holding-money.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 350px;
+        /* Increased height */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-size: 30px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Dark Overlay (Only for Background) */
+    #splitly::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(52, 54, 55, 0.5);
+        /* 50% black overlay */
+        z-index: -1;
+        /* Send the overlay to the back */
+    }
+
+    .get-started-btn {
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(45deg, #ff7e5f, #feb47b);
+        /* Gradient button */
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        box-shadow: 0px 4px 10px rgba(255, 126, 95, 0.3);
+    }
+
+    .get-started-btn:hover {
+        background: linear-gradient(45deg, #feb47b, #ff7e5f);
+        /* Reverse gradient on hover */
+        transform: scale(1.1);
+        box-shadow: 0px 6px 15px rgba(255, 126, 95, 0.5);
+    }
+
+
+
+
+    #splitly img {
+        height: 90px;
+        width: 180px;
+    }
+
+    #splitly h1 {
+        color: rgb(255, 255, 255);
+        font-family: "Poppins", sans-serif;
+        font-size: 30px;
+    }
+
+    /* Section Styling */
+    #content {
+        padding: 20px;
+    }
+
+    h1 {
+        color: #027aca;
+        font-size: 28px;
+    }
+
+    p {
+        color: #333;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* Features List */
+    #sec-b ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #sec-b ul li {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #e07b00;
+    }
+
+
+.illus{
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+align-items: center;
+padding: 20px;
+}
+
+.illus img{
+    width: 90%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow:8px 9px 7px 0px rgba(0, 0, 0, 0.2)
+}
+
+
+.illus p{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-top: 12px;
+}
+
+    /* Highlighted Features */
+    .highlight {
+        color: #e07b00;
+    }
+
+    /* Call to Action */
+    #btn-2 {
+        background-color: #f7c948;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    #btn-2 button {
+        background-color: #027aca;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    #btn-2 button:hover {
+        background-color: #004573;
+    }
+
+    /* Footer */
+    #last {
+    background-color: #222; /* Darker background for a premium look */
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+#last a {
+    text-decoration: none;
+    color: #ffcc00; /* Gold for contrast */
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+#last a:hover {
+    color: #ffd700; /* Brighter gold on hover */
+    text-decoration: underline;
+}
+
+ 
+
+
+
+    /* Make it more responsive */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+        #btn {
+        /* margin-right: 10px; */
+    }
+    #btn button {
+        width: 85px;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+        #btn-2 {
+            width: 90%;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Fixed Navbar -->
+    <div id="navbar">
+        <div id="logo">
+            <img src="SPLIT (4)-Photoroom (1)-Photoroom.png" alt="splitly">
+
+        </div>
+        <div id="btn">
+            <button id="login"><a href="login.html">Log In</a></button>
+            <button id="signup"><a href="signup.html">Sign Up</a></button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+
+    <div id="splitly">
+        <img src="SPLIT (4)-Photoroom (1)-Photoroom.png" alt="split">
+        <h1>"Split bills easily, fairly, and in a fun way!"</h1>
+        <a href="signup.html" class="get-started-btn">Get Started</a>
+    </div>
+
+
+    <div id="content">
+        <div id="sec-a">
+            <h1>What is Splitly?</h1>
+            <p>Splitly makes it easy to share expenses with friends, track who owes what, and settle debts instantly.
+                Unlike other apps, Splitly offers a fun way to split expenses, AI-powered smart calculations, and
+                instant UPI payments!</p>
+        </div>
+
+        <div id="sec-b">
+            <h1>Standard Features</h1>
+            <ul>
+                <li><b>Create Groups & Add Friends</b> – Manage expenses easily with your circle.</li>
+                <li><b>Equal or Unequal Splits</b> – Adjust who pays what.</li>
+                <li><b>Split by % or Shares</b> – Flexible calculations.</li>
+                <li><b>Track & Simplify Debts</b> – Reduce unnecessary payments.</li>
+                <li><b>Recurring Expenses</b> – Auto-split monthly expenses.</li>
+            </ul>
+        </div>
+
+
+
+<div class="illus">
+        <div class="illus">
+            <div class="img-1">
+                <img src="travel.jpeg" alt="travel">
+                <p>"More memories, less money stress—Splitly makes group travel effortless!"</p>
+            </div>
+        </div>
+            <div class="illus">
+            <div class="img-2">
+                <img src="exp012.jpeg" alt="travel">
+                <p> "Smart expenses, happier trips—Splitly keeps it fair for everyone!"</p>
+            </div>
+        </div>
+        <div class="illus">
+            <div class="img-3">
+                <img src="split021.jpeg" alt="travel">
+                <p>"More memories, less money stress—Splitly makes group travel effortless!"</p>
+            </div>
+        </div>
+    </div>
+        
+
+
+
+
+        <div id="sec-c">
+            <h1>What Makes Splitly Unique?</h1>
+            <h2>🎲 <span class="highlight">Fun Split Mode</span> – Let the app decide who pays what for a surprise!</h2>
+            <h2>⚡ <span class="highlight">Instant UPI Payments</span> – Pay & settle without switching apps.</h2>
+            <h2>🤖 <span class="highlight">Smart AI-Based Splitting</span> – Auto-adjust based on spending behavior.
+            </h2>
+            <h2>🔄 <span class="highlight">Auto-Reminders & Auto-Pay</span> – Never chase payments again.</h2>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div id="btn-2">
+        <p>"Ready to Split Smarter? Sign up now and stay updated for our app launch!"</p>
+        <a href="signup.html"><button>Get Started</button></a>
+        <p style="font-size: 14px; color: gray; text-align: center; margin-top: 10px;">
+            No spam, no hidden fees. Just smarter bill splitting!
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <p id="last">
+        <a href="learn.html">Learn More</a> | 
+        <a href="contact.html">Contact Us</a> | 
+        <a href="https://www.instagram.com/splitlyofficial" target="_blank">
+            <img src="social.png" alt="Instagram" style="width: 24px; vertical-align: middle;">
+        </a> 
+        <a href="https://twitter.com/splitlyofficial" target="_blank">
+            <img src="twitter.png" alt="Twitter" style="width: 24px; vertical-align: middle;">
+        </a>
+    </p>
+    
+    
+
+
+</body>
+
+</html>
