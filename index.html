@@ -21,44 +21,46 @@
 
     /* Navbar - Fixed with Shadow */
     #navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #027aca;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(to right,#A9F1DF , #FFBBBB);
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
 
 
     #logo img {
         height: 40px;
     }
-    #btn {
-    display: flex;
-    gap: 10px;
-    margin-right: 20px;  /* Ensures buttons stay inside screen */
-}
 
-/* Fix Button Size & Spacing */
-#btn button {
-    height: 40px;
-    width: 100px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 15px;
-}
+    #btn {
+        display: flex;
+        gap: 10px;
+        margin-right: 20px;
+        /* Ensures buttons stay inside screen */
+    }
+
+    /* Fix Button Size & Spacing */
+    #btn button {
+        height: 40px;
+        width: 100px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 15px;
+    }
 
     #login {
         background-color: white;
@@ -73,6 +75,7 @@
         background-color: #FF8C00;
         color: white;
     }
+
     #signup a {
         text-decoration: none;
         color: white;
@@ -193,27 +196,28 @@
         color: #e07b00;
     }
 
+    
 
-.illus{
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-align-items: center;
-padding: 20px;
-}
+    .illus {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        align-items: center;
+        padding: 20px;
+    }
 
-.illus img{
-    width: 90%;
-    max-width: 350px;
-    border-radius: 12px;
-    box-shadow:8px 9px 7px 0px rgba(0, 0, 0, 0.2)
-}
+    .illus img {
+        width: 90%;
+        max-width: 350px;
+        border-radius: 12px;
+        box-shadow: 8px 9px 7px 0px rgba(0, 0, 0, 0.2)
+    }
 
 
-.illus p{
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-    margin-top: 12px;
-}
+    .illus p {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        margin-top: 12px;
+    }
 
     /* Highlighted Features */
     .highlight {
@@ -245,26 +249,29 @@ padding: 20px;
 
     /* Footer */
     #last {
-    background-color: #222; /* Darker background for a premium look */
-    padding: 20px;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-}
+        background-color: #222;
+        /* Darker background for a premium look */
+        padding: 20px;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
 
-#last a {
-    text-decoration: none;
-    color: #ffcc00; /* Gold for contrast */
-    font-size: 18px;
-    margin: 0 15px;
-}
+    #last a {
+        text-decoration: none;
+        color: #ffcc00;
+        /* Gold for contrast */
+        font-size: 18px;
+        margin: 0 15px;
+    }
 
-#last a:hover {
-    color: #ffd700; /* Brighter gold on hover */
-    text-decoration: underline;
-}
+    #last a:hover {
+        color: #ffd700;
+        /* Brighter gold on hover */
+        text-decoration: underline;
+    }
 
- 
+
 
 
 
@@ -277,14 +284,17 @@ padding: 20px;
         p {
             font-size: 16px;
         }
+
         #btn {
-        /* margin-right: 10px; */
-    }
-    #btn button {
-        width: 85px;
-        font-size: 14px;
-        padding: 5px 10px;
-    }
+            margin-right: 10px;
+        }
+
+        #btn button {
+            width: 85px;
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+
         #btn-2 {
             width: 90%;
         }
@@ -335,27 +345,27 @@ padding: 20px;
 
 
 
-<div class="illus">
         <div class="illus">
-            <div class="img-1">
-                <img src="travel.jpeg" alt="travel">
-                <p>"More memories, less money stress—Splitly makes group travel effortless!"</p>
-            </div>
-        </div>
             <div class="illus">
-            <div class="img-2">
-                <img src="exp012.jpeg" alt="travel">
-                <p> "Smart expenses, happier trips—Splitly keeps it fair for everyone!"</p>
+                <div class="img-1">
+                    <img src="travel.jpeg" alt="travel">
+                    <p>"More memories, less money stress—Splitly makes group travel effortless!"</p>
+                </div>
+            </div>
+            <div class="illus">
+                <div class="img-2">
+                    <img src="exp012.jpeg" alt="travel">
+                    <p> "Smart expenses, happier trips—Splitly keeps it fair for everyone!"</p>
+                </div>
+            </div>
+            <div class="illus">
+                <div class="img-3">
+                    <img src="split021.jpeg" alt="travel">
+                    <p>"More memories, less money stress—Splitly makes group travel effortless!"</p>
+                </div>
             </div>
         </div>
-        <div class="illus">
-            <div class="img-3">
-                <img src="split021.jpeg" alt="travel">
-                <p>"More memories, less money stress—Splitly makes group travel effortless!"</p>
-            </div>
-        </div>
-    </div>
-        
+
 
 
 
@@ -381,17 +391,17 @@ padding: 20px;
 
     <!-- Footer -->
     <p id="last">
-        <a href="learn.html">Learn More</a> | 
-        <a href="contact.html">Contact Us</a> | 
+        <a href="learn.html">Learn More</a> |
+        <a href="contact.html">Contact Us</a> |
         <a href="https://www.instagram.com/splitlyofficial" target="_blank">
             <img src="social.png" alt="Instagram" style="width: 24px; vertical-align: middle;">
-        </a> 
+        </a>
         <a href="https://twitter.com/splitlyofficial" target="_blank">
             <img src="twitter.png" alt="Twitter" style="width: 24px; vertical-align: middle;">
         </a>
     </p>
-    
-    
+
+
 
 
 </body>
