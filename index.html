@@ -347,27 +347,25 @@
     }
 
     /* Call to Action */
-    #btn-2 {
-        position: relative;
+     #btn-2 {
+    position: relative;
     background: linear-gradient(-45deg, #0044ff, #0088ff, #001b6b, #0029b2);
     background-size: 400% 400%;
     animation: gradientAnimation 6s ease-in-out infinite;
-    
+    min-height: 250px; /* Ensures section doesn't collapse */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     color: white;
-    font-size: 30px;
+    font-size: 22px;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     z-index: 1;
-    transition: background 0.5s ease-in-out;
-    margin-top: 20px;
-    padding: 20px;
-    }
+    opacity: 1; /* Ensure background is always visible */
+}
 
     #btn-2 button {
         padding: 12px 24px;
